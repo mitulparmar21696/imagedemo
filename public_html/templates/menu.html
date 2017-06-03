@@ -1,0 +1,39 @@
+<div class="mb-10" ng-init="init()">
+    <div class="navbar navbar-default navbar-fixed-top" >
+        <div class="navbar-header">
+            <div class="container">
+                <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="sidebar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Demo Project</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row row-offcanvas row-offcanvas-left">
+                <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" >
+                    <ul class="nav">
+                        <li class="active"><a href="#">Link 1</a></li>
+                        <li><a href="#">Link 2</a></li>
+                        <li><a href="#">Link 3</a></li>   
+
+                        <li><a href="#">Link 5</a></li>   
+                    </ul>
+                </div>
+                <div class="col-xs-6 col-sm-9">
+                    <form id="company-form" name="companyform" novalidate="novalidate" valid-submit="Save()">
+                        
+                        <div >
+                            <input type="file" name="file" onchange="angular.element(this).scope().photoChanged(this.files)"  />
+                            <img ng-src="{{ thumbnail.dataUrl}}"/>
+                        </div>
+                        <span data-ng-show="errmsg.msg"  class="text-danger">{{errmsg.error}}</span>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>  
